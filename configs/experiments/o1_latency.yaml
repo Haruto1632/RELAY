@@ -1,0 +1,17 @@
+defaults: [../base.yaml, ../presets/pilot_core.yaml]
+environment:
+  communication:
+    mode: when_who
+    cost_per_recipient_attempt: 0.01
+    additional_latency_steps: 2
+experiment_name: o1-latency
+locked_fields:
+  - environment.environment_version
+  - environment.preset
+  - environment.grid
+  - environment.team
+  - environment.incidents
+  - environment.sensors
+  - environment.motion
+  - environment.horizon
+  - environment.communication.mode
