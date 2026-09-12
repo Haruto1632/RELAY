@@ -1,18 +1,50 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Python environments and caches
+.venv/
+.python/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
 
-# Other files and folders
-.settings/
+# Build and package output
+build/
+dist/
+*.egg-info/
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# RELAY generated runs and scratch data
+runs/
+output/
+tmp/
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Checkpoints/models must never be committed, even outside runs/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+**/checkpoints/
+
+# Generated experiment logs, replay data, and media
+*.parquet
+*.tfevents.*
+events.out.tfevents.*
+*.gif
+*.mp4
+*.avi
+*.webm
+*.log
+
+# Local Hydra and notebook state
+.hydra/
+multirun/
+.ipynb_checkpoints/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

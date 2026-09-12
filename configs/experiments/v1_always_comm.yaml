@@ -1,0 +1,14 @@
+defaults: [../base.yaml, ../presets/pilot_core.yaml]
+environment:
+  communication: {mode: always_broadcast, cost_per_recipient_attempt: 0.0}
+experiment_name: v1-always-comm
+locked_fields:
+  - environment.environment_version
+  - environment.preset
+  - environment.grid
+  - environment.team
+  - environment.incidents
+  - environment.sensors
+  - environment.motion
+  - environment.horizon
+  - environment.communication.mode

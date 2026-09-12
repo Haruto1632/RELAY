@@ -1,0 +1,18 @@
+defaults: [../base.yaml, ../presets/p3_core.yaml]
+environment:
+  communication: {mode: when_who, cost_per_recipient_attempt: 0.01}
+experiment_name: p3-context
+training:
+  scenario_manifest: configs/manifests/relay-grid-v1-p3.json
+evaluation:
+  scenario_manifest: configs/manifests/relay-grid-v1-p3.json
+locked_fields:
+  - environment.environment_version
+  - environment.preset
+  - environment.grid
+  - environment.team
+  - environment.incidents
+  - environment.sensors
+  - environment.motion
+  - environment.horizon
+  - environment.communication.mode
